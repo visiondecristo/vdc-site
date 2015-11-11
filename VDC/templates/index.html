@@ -1,0 +1,237 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} Visión de Cristo {% endblock title %}
+
+{% block content %}
+<section id="featured">
+	<!-- start slider -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+	<!-- Slider -->
+     <div id="main-slider" class="flexslider">
+            <ul class="slides">
+
+            <li>
+                <img src="{{ url_for('static', filename='img/slides/6.jpg') }}" alt="" />
+                <div class="flex-caption">
+                    <h3>Visión</h3> 
+					<p>Nuestra visión es la visión de Cristo. Predicar el Evangelio por todo el mundo, tu puedes ser parte de esta visión.</p> 
+					<!-- <a href="#" class="btn btn-theme">Leer Más</a> -->
+                </div>
+              </li>
+
+              <li>
+                <img src="{{ url_for('static', filename='img/slides/4.jpg') }}" alt="" />
+                <div class="flex-caption">
+                    <h3>Radio</h3> 
+					<p>Una plataforma flexible y abierta para continuar diseminando el mensaje del Evangelio.</p> 
+					<a href="{{ url_for('radio',) }}" class="btn btn-theme">Leer Más</a>
+                </div>
+              </li>
+              <li>
+                <img src="{{ url_for('static', filename='img/slides/5.jpg') }}" alt="" />
+                <div class="flex-caption">
+                    <h3>Blog</h3> 
+					<p>Propague el Mensaje del evangelio, através de articulos que son compartidos en las redes sociales y demás.</p> 
+					<!-- <a href="#" class="btn btn-theme">Leer Más</a> -->
+                </div>
+              </li>
+              
+            </ul>
+        </div>
+	<!-- end slider -->
+			</div>
+		</div>
+	</div>	
+	
+	
+
+	</section>
+
+	<section class="callaction">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="big-cta">
+					<div class="cta-text">
+						<h2><span>Visión De Cristo</span> "id por todo el mundo, y predicad el Evangelio..."</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+
+	<div id="content">
+
+	<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+
+		<div class="p-center">
+		<div class="text-center">
+		<div class="big-cta">
+		<span><h2>Nuestra Meta</h2><span>
+		</div>
+
+		<p>Visión de Cristo es una plataforma ministerial, sin fines de lucro, que tiene como meta continuar propagando el mensaje del evangelio, atraves de la <strong>Radio, TV, y Blogs.</strong> Invitamos a todos los ministerios, Iglesias, y organizaciones cristianas que prediquen las sana doctrinas a formar parte de este ministerio.</p>
+
+		</div>
+		</div>
+
+		</div>
+	</div>
+		
+	</div>
+</section>
+
+	<section id="content">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="row">
+
+				<div class="col-lg-3">
+						<div class="box">
+							<div class="box-gray aligncenter">
+								<h4>Visión</h4>
+								<div class="icon">
+								<i class="fa fa-eye fa-3x"></i>
+								</div>
+								<p>
+								 Nuestra visión es la visión de Cristo, predicar el Evangelio por todo el mundo.
+								</p>
+									
+							</div>
+							<div class="box-bottom">
+								<!-- <a href="#">Leer Más</a> -->
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-lg-3">
+						<div class="box">
+							<div class="box-gray aligncenter">
+								<h4>Internet Radio</h4>
+								<div class="icon">
+								<i class="fa fa-microphone fa-3x"></i>
+								</div>
+								<p class="">
+								 Una plataforma flexible y abierta para continuar diseminando el mensaje del Evangelio.
+								</p>
+									
+							</div>
+							<div class="box-bottom">
+								<a href="{{ url_for('radio') }}">Escuchar En Vivo</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="box">
+							<div class="box-gray aligncenter">
+								<h4>Blog</h4>
+								<div class="icon">
+								<i class="fa fa-comment fa-3x"></i>
+								</div>
+								<p>
+								 Propague el Mensaje del evangelio, através de articulos que son compartidos...
+								</p>
+									
+							</div>
+							<div class="box-bottom">
+								<!-- <a href="{{ url_for('blog') }} ">Leer Más</a> -->
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="box">
+							<div class="box-gray aligncenter">
+								<h4>Internet TV</h4>
+								<div class="icon">
+								<i class="fa fa-desktop fa-3x"></i>
+								</div>
+								<p>
+								 Esteremos transmitiendo los programas en Vivo atraves del internet.
+								</p>
+									
+							</div>
+							<div class="box-bottom">
+								<!-- <a href="{{ url_for('galeria') }}">Leer Más</a> -->
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- divider -->
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="solidline">
+				</div>
+			</div>
+		</div>
+		<!-- end divider -->
+			<!-- Portfolio Projects -->
+		<div class="row">
+			<div class="col-lg-12">
+				<h4 class="heading">El Trabajo</h4>
+				<div class="row">
+					<section id="projects">
+					<ul class="portfolio" id="thumbs">
+						<!-- Item Project and Filter Name -->
+						<li data-type="web" data-id="id-0" class="col-lg-3 design">
+						<div class="item-thumbs">
+						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+						<a href="{{ url_for('static', filename='img/works/tab.jpg') }}" title="Ministración" data-fancybox-group="gallery" class="hover-wrap fancybox">
+						<span class="overlay-img"></span>
+						<span class="overlay-img-thumb font-icon-plus"></span>
+						</a>
+						<!-- Thumb Image and Description -->
+						<img alt="Familias unidas es la visión de Cristo." src="{{ url_for('static', filename='img/works/tab.jpg') }}">
+						</div>
+						</li>
+						<!-- End Item Project -->
+						<!-- Item Project and Filter Name -->
+						<li data-type="icon" data-id="id-1" class="item-thumbs col-lg-3 design">
+						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+						<a href="{{ url_for('static', filename='img/works/ninos.jpg') }}" title="Culto con niños" data-fancybox-group="gallery" class="hover-wrap fancybox">
+						<span class="overlay-img"></span>
+						<span class="overlay-img-thumb font-icon-plus"></span>
+						</a>
+						<!-- Thumb Image and Description -->
+						<img alt="Culto de niños, En La Republica Dominicana, durante la distribución de Mochilas surtida con utiles escolares." src="{{ url_for('static', filename='img/works/ninos.jpg') }}">
+						</li>
+						<!-- End Item Project -->
+						<!-- Item Project and Filter Name -->
+						<li data-type="illustrator" data-id="id-2" class="item-thumbs col-lg-3 photography">
+						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+						<a href="{{ url_for('static', filename='img/works/zapato.jpg') }}" title="Acto de benevolencia" data-fancybox-group="gallery" class="hover-wrap fancybox">
+						<span class="overlay-img"></span>
+						<span class="overlay-img-thumb font-icon-plus"></span>
+						</a>
+						<!-- Thumb Image and Description -->
+						<img alt="Durante un trabajo misionero, la niña a la derecha notó que la niña de la izquierda no tenia zapatos, y se quitó los de ella y se los regaló." src="{{ url_for('static', filename='img/works/zapato.jpg') }}">
+						</li>
+						<!-- End Item Project -->
+						<!-- Item Project and Filter Name -->
+						<li data-type="illustrator" data-id="id-2" class="item-thumbs col-lg-3 photography">
+						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
+						<a href="{{ url_for('static', filename='img/works/ayuda.jpg') }}" title="Bendición para los niños" data-fancybox-group="gallery" class="hover-wrap fancybox">
+						<span class="overlay-img"></span>
+						<span class="overlay-img-thumb font-icon-plus"></span>
+						</a>
+						<!-- Thumb Image and Description -->
+						<img alt="Ayudando y bendiciendo la niñez en comunidades necesitadas" src="{{ url_for('static', filename='img/works/ayuda.jpg') }}">
+						</li>
+						<!-- End Item Project -->
+					</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+{% endblock content %}

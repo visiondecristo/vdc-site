@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} Visión de Cristo | Contactatenos {% endblock title %}
+
+{% block content %}
+
+<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="breadcrumb">
+					<li><a href="{{ url_for('inicio') }}"><i class="fa fa-home"></i></a><i class="icon-angle-right"></i></li>
+					<li class="active">contactenos</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</section>
+
+<div class="container">
+	<div class="row row-spacer">
+	</div>
+
+</div>
+
+<div class="container">
+
+<div class="row">
+<div class="col-md-8">
+<h2>Contactenos</h2>
+
+
+<strong>Para comunicarse con nosotros, por favor complete el siguiente formulario.</strong>
+
+
+
+<!-- Flash form messages -->
+{% for message in form.name.errors %}
+<div class="flash">{{ message }}</div>
+{% endfor %}
+
+{% for message in form.email.errors %}
+<div class="flash">{{ message }}</div>
+{% endfor %}
+
+{% for message in form.subject.errors %}
+<div class="flash">{{ message }}</div>
+{% endfor %}
+
+{% for message in form.message.errors %}
+<div class="flash">{{ message }}</div>
+{% endfor %}
+<!-- End Flash form messages -->
+
+
+
+<!-- form -->
+<form action="{{ url_for('contactenos') }}" method="post">
+
+
+
+<div class="form-group">
+
+
+{{ form.name.label }}
+{{ form.name(class="form-control", placeholder="Nombre") }}
+
+{{ form.email.label }}
+{{ form.email(class="form-control", placeholder="Correo Electronico") }}
+ 
+
+
+ {{ form.subject.label }}
+ {{ form.subject(class="form-control", placeholder="Asunto") }}
+
+
+
+ {{ form.message.label }}
+ {{ form.message(class="form-control", rows="3", placeholder="Mensaje") }}
+
+
+
+ {{ form.submit (class="btn btn-theme btn-lg margintop10 pull-left") }}
+ 
+{{ form.csrf_token }}
+
+
+ </form>
+<!-- End form -->
+
+
+</div>
+
+
+
+
+ </div>
+</div>
+</div>
+</br>
+
+{% endblock content %}
